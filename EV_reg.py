@@ -14,8 +14,6 @@ def clean_ev_data():
     """
     Clean and preprocess EV registration data
     
-    Returns:
-    df (DataFrame): Cleaned DataFrame
     """
     # Read the CSV file from the data folder in GitHub
     print("Reading data from data/Vehicle_Registrations.csv...")
@@ -85,11 +83,6 @@ def analyze_ev_data_basic(df):
     """
     Generate basic descriptive statistics and visualizations for the cleaned EV data
     
-    Parameters:
-    df (DataFrame): Cleaned DataFrame
-    
-    Returns:
-    None (generates plots)
     """
     print("Analyzing EV registration data (basic visualizations)...")
     
