@@ -38,7 +38,7 @@ The rapid adoption of electric vehicles (EVs) presents both opportunities and ch
 
 ### Data Processing and Vehicle Registration Analysis
 #### Script `EV_reg.py`
-* Preprocesses vehicle registration data by:
+* Preprocesses vehicle registration data (`Vehicle_Registrations.csv`) by:
   * Filtering for vehicle record types ('VEH')
   * Dropping unnecessary columns
   * Standardizing column names
@@ -63,7 +63,7 @@ The rapid adoption of electric vehicles (EVs) presents both opportunities and ch
 
 ### Charging Station Analysis
 #### Script `EV_charger.py`
-* Import and filtering of alternative fuel stations to focus on electric (ELEC) charging stations
+* Import and filtering of alternative fuel stations (`alt_fuel_stations.csv`) to focus on electric (ELEC) charging stations
 * Temporal analysis:
   * Cumulative timeline of EV charger installations over time
   * Annual installation rates with colored year ranges for visual grouping
