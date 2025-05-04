@@ -90,17 +90,29 @@ def analyze_ev_data_basic(df):
     if not os.path.exists("graphs"):
         os.makedirs("graphs")
     
-    # Count record_type by Zip
-    print("Analyzing record types by ZIP code...")
-    record_by_zip = df.groupby('Zip')['record_type'].count().sort_values(ascending=False).head(20)
-    
+    # Count record_type by Zip for 2024 only
+    print("Analyzing record types by ZIP code for 2024...")
+    # Filter data for 2024 registrations only
+    df_2024 = df[df['reg_year'] == 2024]
+    record_by_zip_2024 = df_2024.groupby('Zip')['record_type'].count().sort_values(ascending=False).head(20)
+
     plt.figure(figsize=(12, 8))
-    record_by_zip.plot(kind='bar')
-    plt.title('Top 20 ZIP Codes by Number of Registrations', fontsize=16)
+    ax = record_by_zip_2024.plot(kind='bar')
+    plt.title('Top 20 ZIP Codes by Number of Registrations in 2024', fontsize=16)
     plt.xlabel('ZIP Code', fontsize=14)
     plt.ylabel('Count', fontsize=14)
+
+    # Add count labels on top of each bar
+    for i, count in enumerate(record_by_zip_2024):
+        ax.text(i, count + (count * 0.01),
+                str(count),                
+                ha='center',              
+                va='bottom',               
+                fontweight='bold',        
+                fontsize=10)              
+
     plt.tight_layout()
-    plt.savefig('graphs/record_by_zip.png')
+    plt.savefig('graphs/record_by_zip_2024.png')
     plt.close()
     
     # Count record_type by Zip and reg_year (starting from 2020)
