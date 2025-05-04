@@ -34,6 +34,11 @@ The rapid adoption of electric vehicles (EVs) presents both opportunities and ch
 * `alt_fuel_stations.csv`: Alternative fuel stations data from AFDC
 * `ny_tiger_shapfile/tl_2024_36_cousub.shp`: US Census 2024 TIGER/Line Shapefiles for NY state boundaries
 
+### Output Data Files
+* `cleaned_EV_reg.csv`: cleaned data file for EV registration only using `EV_reg.py`
+* `data/electric_charging_stations.csv`: Public electric charging stations data created using `EV_charger.py`
+* `data/summary_statistics.csv`: A simple summary statistics for public electric charging station created using `EV_charger.py`
+
 ## III. Script Descriptions
 
 ### Data Processing and Vehicle Registration Analysis
@@ -45,7 +50,6 @@ The rapid adoption of electric vehicles (EVs) presents both opportunities and ch
   * Creating registration year from date
   * Removing records before 2000
   * Filtering out non-relevant registration classes and body types
-  * Saving cleaned data to `cleaned_EV_reg.csv`
 
 * Generates descriptive statistics and visualizations:
   * Bar charts showing top 20 ZIP codes by registration count in 2024
@@ -75,10 +79,6 @@ The rapid adoption of electric vehicles (EVs) presents both opportunities and ch
   * Heat maps visualizing concentration areas
   * NYC-specific focus map showing urban charging infrastructure
   * Multi-panel maps breaking down installations by time period
-
-* Data export:
-  * Processed data saved to `data/electric_charging_stations.csv`
-  * Summary statistics compiled in `data/summary_statistics.csv`
 
 ## IV. Visualizations
 
