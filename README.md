@@ -37,7 +37,8 @@ The rapid adoption of electric vehicles (EVs) presents both opportunities and ch
 ## III. Script Descriptions
 
 ### Data Processing and Vehicle Registration Analysis
-* `clean_ev_data()`: Preprocesses vehicle registration data by:
+#### Script `EV_reg.py`
+* Preprocesses vehicle registration data by:
   * Filtering for vehicle record types ('VEH')
   * Dropping unnecessary columns
   * Standardizing column names
@@ -46,21 +47,22 @@ The rapid adoption of electric vehicles (EVs) presents both opportunities and ch
   * Filtering out non-relevant registration classes and body types
   * Saving cleaned data to `cleaned_EV_reg.csv`
 
-* `analyze_ev_data_basic()`: Generates descriptive statistics and visualizations:
+* Generates descriptive statistics and visualizations:
   * Bar charts showing top 20 ZIP codes by registration count in 2024
   * Line graphs showing registration trends for top 5 ZIP codes from 2020-2025
   * All visualizations include count labels for easy interpretation
 
-* `create_heatmap()`: Creates two heatmap visualizations:
+* Creates two heatmap visualizations:
   * Registration types by year showing absolute counts
   * Percentage distribution showing changing composition over time
   * Focusses on top 10 registration classes by volume
 
-* `create_zip_heatmap()`: Produces heatmaps of registrations by ZIP code and year:
+* Produces heatmaps of registrations by ZIP code and year:
   * Absolute count heat map for top 20 ZIP codes
   * Normalized percentage distribution showing year-over-year growth patterns
 
 ### Charging Station Analysis
+#### Script `EV_charger.py`
 * Import and filtering of alternative fuel stations to focus on electric (ELEC) charging stations
 * Temporal analysis:
   * Cumulative timeline of EV charger installations over time
