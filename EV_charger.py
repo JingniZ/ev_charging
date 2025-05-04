@@ -11,7 +11,6 @@ import geopandas as gpd
 import contextily as ctx
 from shapely.geometry import Point
 
-# Create directories if they don't exist
 os.makedirs('data', exist_ok=True)
 os.makedirs('graphs', exist_ok=True)
 
